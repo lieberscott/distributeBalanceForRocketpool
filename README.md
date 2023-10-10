@@ -16,23 +16,16 @@ Go to Etherscan.io and create an account. Make sure you are logged in.
 
 # Step 1: Determine which delegate contract your minipool is connected to. Add the ABI of the Delegate contract
 A quick explainer from the [Rocketpool docs](https://docs.rocketpool.net/guides/node/minipools/delegates.html#upgrading-your-delegate) on what the Delegate contract is:
-> Every validator you run has a minipool contract as its "owner" so-to-speak. The minipool is a unique contract specifically assigned to that validator; it acts as its withdrawal address. All reward and staking balance withdrawals from the Beacon Chain will be sent to the minipool contract.
-> 
-> Each minipool is unique to ensure that you (the node operator) have ultimate control over it. Nobody else controls it, nobody else can change it; it's entirely at your command.
-> 
-> That being said, in order to minimize gas costs during node deposits, the minipool itself contains very little actual functionality. Almost everything it can do is deferred to a delegate contract.
-> 
 > The minipool delegate contract is a special contract that contains the bulk of the logic required by minipools - things like fairly distributing the balance between you and the pool stakers, for example. Unlike minipools, where each minipool is a unique contract, the delegate is a single contract that many minipools can "forward" requests to.
 >
 > Occasionally, the Rocket Pool development team will publish a new minipool delegate that adds new functionality. For example, in the Atlas update, we introduced a new delegate that had support for distributing skimmed rewards without needing to close the minipool.
->
-> Minipool can have their delegates upgraded to take advantage of this new functionality. Delegate upgrades are opt-in, so you can decide if and when you want to use them. That being said, they are usually required in order to take advantage of new functionality that network upgrades introduce.
 
 To see which delegate contract you need to use, go to your 
 
 
 # Step 2. Go to your minipool address on Etherscan, click Contract, click "more options", then "Is this a proxy?"
-> If you need to find your minipool address, follow the directions below. Otherwise, you can skip ahead.<br/>
+![Contract 2](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/97723dc0-b56d-4b55-ae28-b12c8f2d27c7)
+> If you need to find your minipool address, follow the directions below.<br/>
 > a. Keep in mind, you have three main addresses for the purpose of tracking down your minipool address: Your originating wallet addresss, your node address, and your minipool address. <br/>
 > b. Go to Etherscan.io and enter the address for your original wallet address from which you originally sent your 8ETH or 16ETH.<br/>
 > c. Find the transaction from which you sent your 8TH or 16ETH (or more, if setting up multiple minipools) to the node. Click the receiving address. This is your node address.<br/>
@@ -41,12 +34,15 @@ To see which delegate contract you need to use, go to your
 > e. Find the transaction where your node received the 8ETH or 16ETH from your original wallet. Right afterward, should be a "Stake" transaction. The receiver of this transaction is your minipool.<br/>
 > ![Finding Node 2](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/41973233-1284-4ba9-8a1f-e6e4bd6bb884)
 
-![Contract 2](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/97723dc0-b56d-4b55-ae28-b12c8f2d27c7)
-
 
 # Step 3. Then complete the verification that the contract is a proxy contract, and click save.
+![Proxy Contract 1](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/b9c30d5e-c5b6-4d64-b310-5addaf668773)
+
 
 # Step 4. Go back to the minipool address, click on the Contract tab, refresh the page, and "Write as proxy" should be visible.
+![Distribute Balance 1](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/f7c94cd2-b13f-4b7b-b28e-bd00c09934f0)
 
-# Step 5. Write `distributeBalance`
+# Step 5. Write `distributeBalance` and enter `false` as the parameter
 As of this writing it is the fifth function down. Write "false" as a parameter
+
+# Step 6. Withdraw RPL stake
