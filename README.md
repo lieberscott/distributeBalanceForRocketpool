@@ -5,7 +5,7 @@ Special thanks to @P-tches in the Rocketpool Discord for providing the basic ste
 
 
 This guide is meant for someone who needs to use Etherscan to distribute the balance of their minipool back to their withdrawal address.
-This guide assumes you have already performed (a voluntary exit of your validators)[https://www.youtube.com/watch?v=KoBAacMWA_k].
+This guide assumes you have already performed [a voluntary exit of your validators](https://www.youtube.com/watch?v=KoBAacMWA_k).
 
 Here are the steps:</br>
 ✅ Create an Etherscan account if you don't already have one </br>
@@ -53,7 +53,7 @@ To see which delegate contract you need to use, go to your minipool address on E
 
 
 a. Sign in to Metamask or another Web3 wallet using your node credentials.
-b. Go to the most recent RPL deployer contract on Etherscan. As of this writing, it is (v3)[https://etherscan.io/address/0x0d8d8f8541b12a0e1194b7cc4b6d954b90ab82ec#code].
+b. Go to the most recent RPL deployer contract on Etherscan. As of this writing, it is [v3](https://etherscan.io/address/0x0d8d8f8541b12a0e1194b7cc4b6d954b90ab82ec#code).
 c. Go to the Contract tab, Read Contract, then `getNodeRPLStake`. Input your validator address.
 ![Screen Shot 2023-10-10 at 2 08 12 PM](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/04468c65-6016-44fa-974c-4ef9853e0397)
 d. Copy the result. It will look like a very big number. This is your RPL stake (in wei).
