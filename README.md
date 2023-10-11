@@ -56,7 +56,7 @@ To see which delegate contract you need to use, go to your minipool address on E
 2. Go to the most recent RPL deployer contract on Etherscan. As of this writing, it is [v3](https://etherscan.io/address/0x0d8d8f8541b12a0e1194b7cc4b6d954b90ab82ec#code).
 3. Go to the Contract tab, Read Contract, then `getNodeRPLStake`. Input your validator address.
 ![Screen Shot 2023-10-10 at 2 08 12 PM](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/04468c65-6016-44fa-974c-4ef9853e0397)
-4. Copy the result. It will look like a very big number. This is your RPL stake (in wei).
+4. Copy the result. It will look like a very big number. This is your RPL stake as stored on the blockchain.
 5. Go to the Write Contract tab. Connect your node address to Etherscan using a Web3 wallet.
 6. Click `withdrawRPL`, enter the number you just copied and write the transaction
 ![Screen Shot 2023-10-10 at 2 15 04 PM](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/6506d879-76d3-4b6d-8cdf-6d850e2f379c)
