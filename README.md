@@ -5,7 +5,7 @@ Special thanks to @P-tches in the Rocketpool Discord for providing the basic ste
 
 
 This guide is meant for someone who needs to use Etherscan to distribute the balance of their minipool back to their withdrawal address.
-This guide assumes you have already performed a voluntary exit of your validators.[^1]
+This guide assumes you have already performed a voluntary exit of your validators. If you need to do that step, this (video is very helpful)[https://www.youtube.com/watch?v=KoBAacMWA_k].
 
 Here are the steps:
 ✅ Create an Etherscan account if you don't already have one
@@ -65,4 +65,4 @@ e. Go to the Write Contract tab. Connect your node address to Etherscan using a 
 f. Click `withdrawRPL`, enter the number you just copied and write.
 ![Screen Shot 2023-10-10 at 2 15 04 PM](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/6506d879-76d3-4b6d-8cdf-6d850e2f379c)
 
-[^1]If you need to do that step, this (video is very helpful)[https://www.youtube.com/watch?v=KoBAacMWA_k].
+[^1]: If you need to do that step, this (video is very helpful)[https://www.youtube.com/watch?v=KoBAacMWA_k].
