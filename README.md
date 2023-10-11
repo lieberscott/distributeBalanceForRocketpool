@@ -19,20 +19,20 @@ Go to Etherscan.io and create an account. Make sure you are logged in.
 From the [Rocketpool docs](https://docs.rocketpool.net/guides/node/minipools/delegates.html#upgrading-your-delegate):
 > The minipool delegate contract is a special contract that contains the bulk of the logic required by minipools - things like fairly distributing the balance between you and the pool stakers, for example. Unlike minipools, where each minipool is a unique contract, the delegate is a single contract that many minipools can "forward" requests to.
 
-To see which delegate contract you need to use, go to your minipool address on Etherscan, click Contract, "Read Contract", then `getDelegate`
+To see which delegate contract you need to use, go to your minipool address on Etherscan, click Contract, "Read Contract", then `getDelegate`<br/>
 ![Screen Shot 2023-10-10 at 1 50 18 PM](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/aa8338a8-df73-4898-ab8f-5174e82b946e)
 
 > If you need to find your minipool address, follow the directions below.<br/>
-> .<br/>
+> <br/>
 > a. Keep in mind, you have three main addresses for the purpose of tracking down your minipool address: Your originating wallet addresss, your node address, and your minipool address. <br/>
 > b. Go to Etherscan.io and enter the address for your original wallet address from which you originally sent your 8ETH or 16ETH.<br/>
 > c. Find the transaction from which you sent your 8TH or 16ETH (or more, if setting up multiple minipools) to the node. Click the receiving address. This is your node address.<br/>
-> .<br/>
+> <br/>
 > ![Finding Node 1](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/4806c4d7-3ba3-460a-9dce-5a3dbb259eb0)
-> .<br/>
+> <br/>
 > d. Click the receiving address. This is your node address.<br/>
 > e. Find the transaction where your node received the 8ETH or 16ETH from your original wallet. Right afterward, should be a "Stake" transaction. The receiver of this transaction is your minipool.<br/>
-> .<br/>
+> <br/>
 > ![Finding Node 2](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/41973233-1284-4ba9-8a1f-e6e4bd6bb884)
 
 ### Step 2. Go to your minipool address on Etherscan, click Contract, click "more options", then "Is this a proxy?"
