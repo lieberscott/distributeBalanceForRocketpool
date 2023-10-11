@@ -5,7 +5,7 @@ Special thanks to @P-tches in the Rocketpool Discord for providing the basic ste
 
 
 This guide is meant for someone who needs to use Etherscan to distribute the balance of their minipool back to their withdrawal address.
-This guide assumes you have already performed a voluntary exit of your validators. If you need to do that step, this (video is very helpful)[https://www.youtube.com/watch?v=KoBAacMWA_k].
+This guide assumes you have already performed (a voluntary exit of your validators)[https://www.youtube.com/watch?v=KoBAacMWA_k].
 
 Here are the steps:</br>
 ✅ Create an Etherscan account if you don't already have one </br>
@@ -16,10 +16,8 @@ Here are the steps:</br>
 Go to Etherscan.io and create an account. Make sure you are logged in.
 
 ### Step 1: Determine which delegate contract your minipool is connected to. Add the ABI of the Delegate contract
-A quick explainer from the [Rocketpool docs](https://docs.rocketpool.net/guides/node/minipools/delegates.html#upgrading-your-delegate) on what the Delegate contract is:
+From the [Rocketpool docs](https://docs.rocketpool.net/guides/node/minipools/delegates.html#upgrading-your-delegate):
 > The minipool delegate contract is a special contract that contains the bulk of the logic required by minipools - things like fairly distributing the balance between you and the pool stakers, for example. Unlike minipools, where each minipool is a unique contract, the delegate is a single contract that many minipools can "forward" requests to.
->
-> Occasionally, the Rocket Pool development team will publish a new minipool delegate that adds new functionality. For example, in the Atlas update, we introduced a new delegate that had support for distributing skimmed rewards without needing to close the minipool.
 
 To see which delegate contract you need to use, go to your minipool address on Etherscan, click Contract, "Read Contract", then `getDelegate`
 ![Screen Shot 2023-10-10 at 1 50 18 PM](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/aa8338a8-df73-4898-ab8f-5174e82b946e)
@@ -40,9 +38,8 @@ To see which delegate contract you need to use, go to your minipool address on E
 ### Step 2. Go to your minipool address on Etherscan, click Contract, click "more options", then "Is this a proxy?"
 ![Contract 2](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/97723dc0-b56d-4b55-ae28-b12c8f2d27c7)
 
-### Step 3. Then complete the verification that the contract is a proxy contract, and click save.
+### Step 3. Complete the verification that the contract is a proxy contract, and click save.
 ![Proxy Contract 1](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/b9c30d5e-c5b6-4d64-b310-5addaf668773)
-
 
 ### Step 4. Go back to the minipool address, click on the Contract tab, refresh the page, and "Write as proxy" should be visible.
 ![Distribute Balance 1](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/f7c94cd2-b13f-4b7b-b28e-bd00c09934f0)
@@ -64,5 +61,3 @@ d. Copy the result. It will look like a very big number. This is your RPL stake 
 e. Go to the Write Contract tab. Connect your node address to Etherscan using a Web3 wallet.
 f. Click `withdrawRPL`, enter the number you just copied and write.
 ![Screen Shot 2023-10-10 at 2 15 04 PM](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/6506d879-76d3-4b6d-8cdf-6d850e2f379c)
-
-[^1]: If you need to do that step, this (video is very helpful)[https://www.youtube.com/watch?v=KoBAacMWA_k].
