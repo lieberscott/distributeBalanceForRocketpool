@@ -45,7 +45,6 @@ To see which delegate contract you need to use, go to your minipool address on E
 ![Distribute Balance 1](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/f7c94cd2-b13f-4b7b-b28e-bd00c09934f0)
 
 ### Step 5. Write `distributeBalance` and enter `false` as the parameter
-As of this writing it is the fifth function down. Write "false" as a parameter
 
 ### Step 6. Withdraw RPL stake
 **NOTE: You can only withdraw your RPL stake by calling the `withdrawRPL` function with your node address. It will be withdrawn to your withdrawal address (if set, otherwise to node address).**
