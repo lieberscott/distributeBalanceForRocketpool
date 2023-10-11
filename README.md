@@ -1,9 +1,6 @@
 # distributeBalanceForRocketpool
 A layman's guide on how to distribute a Rocketpool minipool balance after withdrawing your Minipool
 
-Special thanks to @P-tches in the Rocketpool Discord for providing the basic steps.
-
-
 This guide is meant for someone who needs to use Etherscan to distribute the balance of their minipool back to their withdrawal address.
 This guide assumes you have already performed [a voluntary exit of your validators](https://www.youtube.com/watch?v=KoBAacMWA_k).
 
@@ -60,3 +57,5 @@ To see which delegate contract you need to use, go to your minipool address on E
 5. Go to the Write Contract tab. Connect your node address to Etherscan using a Web3 wallet.
 6. Click `withdrawRPL`, enter the number you just copied and write the transaction
 ![Screen Shot 2023-10-10 at 2 15 04 PM](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/6506d879-76d3-4b6d-8cdf-6d850e2f379c)
+
+Thanks to @P-tches in the Rocketpool Discord for helping provide the basic steps.
