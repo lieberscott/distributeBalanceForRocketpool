@@ -12,10 +12,10 @@ Here are the steps:</br>
 ✅ Set up a custom ABI for the Rocketpool delegate contract </br>
 ✅ Call the delegate contract's `distributeBalance` function from your minipool addresses </br>
 
-## Step 0: Create an Etherscan account.
+### Step 0: Create an Etherscan account.
 Go to Etherscan.io and create an account. Make sure you are logged in.
 
-# Step 1: Determine which delegate contract your minipool is connected to. Add the ABI of the Delegate contract
+### Step 1: Determine which delegate contract your minipool is connected to. Add the ABI of the Delegate contract
 A quick explainer from the [Rocketpool docs](https://docs.rocketpool.net/guides/node/minipools/delegates.html#upgrading-your-delegate) on what the Delegate contract is:
 > The minipool delegate contract is a special contract that contains the bulk of the logic required by minipools - things like fairly distributing the balance between you and the pool stakers, for example. Unlike minipools, where each minipool is a unique contract, the delegate is a single contract that many minipools can "forward" requests to.
 >
@@ -37,20 +37,20 @@ To see which delegate contract you need to use, go to your minipool address on E
 > .<br/>
 > ![Finding Node 2](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/41973233-1284-4ba9-8a1f-e6e4bd6bb884)
 
-## Step 2. Go to your minipool address on Etherscan, click Contract, click "more options", then "Is this a proxy?"
+### Step 2. Go to your minipool address on Etherscan, click Contract, click "more options", then "Is this a proxy?"
 ![Contract 2](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/97723dc0-b56d-4b55-ae28-b12c8f2d27c7)
 
-## Step 3. Then complete the verification that the contract is a proxy contract, and click save.
+### Step 3. Then complete the verification that the contract is a proxy contract, and click save.
 ![Proxy Contract 1](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/b9c30d5e-c5b6-4d64-b310-5addaf668773)
 
 
-## Step 4. Go back to the minipool address, click on the Contract tab, refresh the page, and "Write as proxy" should be visible.
+### Step 4. Go back to the minipool address, click on the Contract tab, refresh the page, and "Write as proxy" should be visible.
 ![Distribute Balance 1](https://github.com/lieberscott/distributeBalanceForRocketpool/assets/26235414/f7c94cd2-b13f-4b7b-b28e-bd00c09934f0)
 
-## Step 5. Write `distributeBalance` and enter `false` as the parameter
+### Step 5. Write `distributeBalance` and enter `false` as the parameter
 As of this writing it is the fifth function down. Write "false" as a parameter
 
-## Step 6. Withdraw RPL stake
+### Step 6. Withdraw RPL stake
 **NOTE: You can only withdraw your RPL stake by calling the `withdrawRPL` function with your node address. It will be withdrawn to your withdrawal address (if set, otherwise to node address).**
 
 **Also, you must wait at least 28 days from your last stake (or re-stake) or the transaction will fail**
